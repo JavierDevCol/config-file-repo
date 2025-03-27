@@ -6,13 +6,13 @@ spring:
     driver-class-name: ${spring.datasource.driver-class-name}
   sql:
     init:
-      mode: always
+      mode: ${spring.sql.init.mode}
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: ${spring.jpa.hibernate.ddl-auto}
     properties:
       hibernate:
-        dialect: ${spring.jpa.properties.dialect}
+        dialect: ${spring.jpa.properties.hibernate.dialect}
 
 
 logging:
